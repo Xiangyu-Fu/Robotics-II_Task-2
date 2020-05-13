@@ -52,7 +52,7 @@ In the discrete time-case, the integral can be approximated as simply summing re
 $$\int_0^t e(\tau) d\tau \approx \sum_{k=1}^n e_kΔt$$
 
 It is possible then to approximate the differential partwith a **single-step backwards difference formula**,
-$$f'(x_k) ! \frac{f(x_k)-(x_{k-1})}{\Delta t}\implies \frac{e_k-e_{k-1}}{\Delta t}$$
+$$f'(x_k) \approx \frac{f(x_k)-(x_{k-1})}{\Delta t} --> \frac{e_k-e_{k-1}}{\Delta t}$$
 
 ### 3.Orientation Correction
 In order to live the correct angle error, the absolute angle obtained must be corrected and converted.
