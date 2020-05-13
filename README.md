@@ -1,3 +1,5 @@
+**Chorm plugin [GitHub with MathJax](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima) is needed for formula display!!**
+
 ### 1.Kinematic Model
 We can split the solution (**inverse kinematic model**)
 
