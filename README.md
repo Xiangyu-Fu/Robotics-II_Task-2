@@ -1,17 +1,25 @@
 ### 1.Kinematic Model
 We can split the solution (**inverse kinematic model**)
-$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1&-(l_1+l_2)\\1&-1&l_1+l_2\\1&-1&-(l_1+l_2)\\1&1&l_1+l_2\end{bmatrix}\begin{bmatrix}v_x\\x_y\end{bmatrix}$$
+
+$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1&-(l_1+l_2)\\1&-1&l_1+l_2\\1&-1(l_1+l_2)\\1&1&l_1+l_2\end{bmatrix}\begin{bmatrix}v_x\\x_y\end{bmatrix}$$
 
 into two controllers,
 
 - position cotroller
-$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1\\1&-1\\1&-1\\1&1\end{bmatrix}\begin{bmatrix}v_x\\v_y\end{bmatrix}$$
+
+$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1{R}\begin{bmatrix}1&1\\1&-1\\1&-1\\1&1\end{bmatrix}\begin{bmatrix}v_x\\v_y\end{bmatrix}$$
+
 - orientation cotroller
+
 $$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}-(a+b)&a+b&-(a+b)&a+b\end{bmatrix}^T\omega_z$$
+
 if we can kown absolute position and orientation $p=[x \quad y\quad \theta]^T$,we can still simplfy the modle:
 - position cotroller
+
 $$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}v_x\end{bmatrix}$$
+
 - orientation cotroller
+
 $$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}-(a+b)&a+b&-(a+b)&a+b\end{bmatrix}^T\omega_z$$
 
 we can assume that $v_x$ and$\omega_z$are constant. 
