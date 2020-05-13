@@ -1,7 +1,7 @@
 ### 1.Kinematic Model
 We can split the solution (**inverse kinematic model**)
 
-$$\begin{bmatrix}\omega_1\\\ \omega_2\\\ \omega_3\\\ \omega_4 \end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1&-(l_1+l_2)\\\ 1&-1&l_1+l_2 \\\ 1&-1(l_1+l_2) \\\ 1&1&l_1+l_2 \end{bmatrix}\begin{bmatrix}v_x \\\ x_y \end{bmatrix}$$
+$$\begin{bmatrix}\omega_1\\\ \omega_2\\\ \omega_3\\\ \omega_4 \end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1&-(l_1+l_2)\\\ 1&-1&l_1+l_2 \\\ 1&-1&(l_1+l_2) \\\ 1&1&l_1+l_2 \end{bmatrix}\begin{bmatrix}v_x \\\ x_y \end{bmatrix}$$
 
 into two controllers,
 
@@ -11,16 +11,16 @@ $$\begin{bmatrix}\omega_1\\\ \omega_2\\\ \omega_3\\\ \omega_4\end{bmatrix}=\frac
 
 - orientation cotroller
 
-$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}-(a+b)&a+b&-(a+b)&a+b\end{bmatrix}^T\omega_z$$
+$$\begin{bmatrix}\omega_1\\\ \omega_2\\\ \omega_3\\\ \omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}-(a+b)&a+b&-(a+b)&a+b\end{bmatrix}^T\omega_z$$
 
 if we can kown absolute position and orientation $p=[x \quad y\quad \theta]^T$,we can still simplfy the modle:
 - position cotroller
 
-$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}v_x\end{bmatrix}$$
+$$\begin{bmatrix}\omega_1\\\ \omega_2\\\ \omega_3\\\ \omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}v_x\end{bmatrix}$$
 
 - orientation cotroller
 
-$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}-(a+b)&a+b&-(a+b)&a+b\end{bmatrix}^T\omega_z$$
+$$\begin{bmatrix}\omega_1\\\ \omega_2\\\ \omega_3\\\ \omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}-(a+b)&a+b&-(a+b)&a+b\end{bmatrix}^T\omega_z$$
 
 we can assume that $v_x$ and$\omega_z$are constant. 
 
@@ -52,7 +52,7 @@ In the discrete time-case, the integral can be approximated as simply summing re
 $$\int_0^t e(\tau) d\tau \approx \sum_{k=1}^n e_kΔt$$
 
 It is possible then to approximate the differential partwith a **single-step backwards difference formula**,
-$$f'(x_k) \approx \frac{f(x_k)-(x_{k-1})}{\Delta t}\implies \frac{e_k-e_{k-1}}{\Delta t}$$
+$$f'(x_k) ! \frac{f(x_k)-(x_{k-1})}{\Delta t}\implies \frac{e_k-e_{k-1}}{\Delta t}$$
 
 ### 3.Orientation Correction
 In order to live the correct angle error, the absolute angle obtained must be corrected and converted.
