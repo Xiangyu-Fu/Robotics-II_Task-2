@@ -1,13 +1,13 @@
 ### 1.Kinematic Model
 We can split the solution (**inverse kinematic model**)
 
-$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1&-(l_1+l_2)\\ 1&-1&l_1+l_2 \\ 1&-1(l_1+l_2) \\ 1&1&l_1+l_2 \end{bmatrix}\begin{bmatrix}v_x\\x_y\end{bmatrix}$$
+$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1&-(l_1+l_2)\\ 1&-1&l_1+l_2 \\ 1&-1(l_1+l_2) \\ 1&1&l_1+l_2 \end{bmatrix}\begin{bmatrix}v_x \\ x_y \end{bmatrix}$$
 
 into two controllers,
 
 - position cotroller
 
-$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1{R}\begin{bmatrix}1&1\\1&-1\\1&-1\\1&1\end{bmatrix}\begin{bmatrix}v_x\\v_y\end{bmatrix}$$
+$$\begin{bmatrix}\omega_1\\\omega_2\\\omega_3\\\omega_4\end{bmatrix}=\frac{1}{R}\begin{bmatrix}1&1\\1&-1\\1&-1\\1&1\end{bmatrix}\begin{bmatrix}v_x\\v_y\end{bmatrix}$$
 
 - orientation cotroller
 
